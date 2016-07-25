@@ -1,0 +1,24 @@
+//Changing aacadah_app_level values ----
+Changed the value of corem get_session, from usin join array to ordinary join, for easy redability
+Changed config.php and removed index.php from one of the values there
+
+
+3 July
+Editted Login.Php to redirect superadmin users to setup page after logging in
+Acadah_School Database Modified
+
+
+Modified acadah_school_term_session to change ts_active to var
+Modified Gad and year_est to var char in acadah_school table
+Added Setup_status to acadah_school table
+
+Changing acadah_class_desc: class_desc_id to id
+
+Addedd status to school_term
+
+
+
+
+Core Modules
+Parent,Staff,Student,Modules Manager
+Staff Would be changed to admin
