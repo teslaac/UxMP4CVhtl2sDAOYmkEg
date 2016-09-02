@@ -1,0 +1,76 @@
+
+.controlB ul li 
+{ display: inline-block;
+  margin: 11px 5px 0 5px;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px #fff;
+  -webkit-box-shadow: inset 0 0 0 1px #fff;
+  -moz-box-shadow: inset 0 0 0 1px #fff;  
+}
+.controlB ul li:hover {
+  background-position: 0 -72px;
+  background: #0FA4DB;
+  }
+.controlB ul li:active { background-position: 0 -144px; }
+.controlB ul li a { padding: 10px 20px 4px 20px; display: block; font-weight: bold; white-space: nowrap; color: #fff; }
+.controlB ul li a span { display: block; margin-top: 5px; }
+
+
+/* ===== Horizontal control buttons ===== */
+
+.horControlB { text-align: center;
+ padding: 5px 0 1px 0; }
+.horControlB ul li { display: inline-block;
+ margin: 11px 5px 0 5px;
+   text-align: center;
+   box-shadow: inset 0 0 0 1px #fff; 
+   -webkit-box-shadow: inset 0 0 0 1px #fff; 
+   -moz-box-shadow: inset 0 0 0 1px #fff;
+    }
+.horControlB ul li:hover { background-position: 0 -43px;
+	background: #0FA4DB; }
+.horControlB ul li:active { background-position: 0 -86px; }
+.horControlB ul li a {  display: block; font-weight: bold; white-space: nowrap; color: #fff; }
+.horControlB ul li img { float: left; margin: 12px 12px 10px 12px; }
+.horControlB ul li a span { display: block; margin: 0px 0 0 40px; padding: 10px 16px 8px 16px; border-left: 1px solid #d5d5d5; } 
+
+.line { height: 2px; display: block;background: #0FA4DB; }
+.bold{
+	padding:6px !important;
+}
+/* select {
+  border: 0 !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background: #fff url(img/demo/select-arrow.png) no-repeat 90% center !important;
+  text-indent: 0.01px !important;
+  text-overflow: "" !important;
+  color: #000 !important;
+  border-radius: 15px !important;
+  padding: 5px !important;
+  box-shadow: inset 0 0 5px rgba(000,000,000, 0.5) !important;
+}
+ select.balck {
+  background-color: #000 !important;
+}
+ select.option3 {
+  border-radius: 5px 5px 5px 5px !important;}*/
+.rotate_text{
+  -webkit-transform: rotate(-90deg);
+    -moz-transform:rotate(-90deg); 
+     -o-transform: rotate(-90deg);
+  position:relative;
+  top:0px;
+  padding: 2px 0;
+  }
+.rotated_cell{
+  height:120px;
+  max-width: 20px !important;
+  vertical-align:bottom
+}
+#avg{
+    width: 30px;
+    position: relative;
+    left: -10px;
+    top: 0px;
+}

@@ -1,0 +1,30 @@
+.navi ul.nav li a > i {
+    width: 20px;
+}
+
+.btn-addon.btn-lg span {
+     width: auto; 
+     height: 45px; 
+     margin: -11px -16px; 
+     margin-right: 16px; 
+     line-height: 45px; 
+     padding: 0 10px;
+}
+.btn-addon span {
+     position: relative; 
+     float: left; 
+     width: 34px; 
+     height: 34px; 
+     margin: -7px -12px; 
+     margin-right: 12px; 
+     line-height: 34px; 
+     text-align: center; 
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2px 0 0 2px;
+}
+
+/* fixed navbar-brand padding issue 
+.navbar-header > button {
+    padding: 0px 0px;
+}
+*/
