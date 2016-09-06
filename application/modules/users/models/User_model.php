@@ -1057,7 +1057,7 @@ class User_model extends CI_Model{
 		if(!empty($_FILES['passport']['name'])){
 
 			$config['upload_path']          = "./assets/$sch_id/";
-            $config['allowed_types']        = 'gif|jpg|png';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
             $config['max_size']             = 2048000;
             // $config['max_width']            = 1024;
             // $config['max_height']           = 768;

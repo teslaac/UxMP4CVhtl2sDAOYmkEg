@@ -58,6 +58,7 @@
 	                <th>Staff Position</th>
 	                <th>Staff Type</th>
 	                <th>Edit</th>
+	                <th>Action</th>
 	                <th>Print</th>
 	              </tr>
 	            </thead>
@@ -79,7 +80,12 @@
 	                <td><?php echo $staff['staff_position']; ?></td>
 	                <td><?php echo $staff['staff_type']; ?></td>
 	                <td><a href="<?php echo base_url(); ?>staff/edit/<?php echo $staff['user_id']; ?>" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Edit</a></td>
-	                <td><a href="#" class="btn btn-xs btn-info"><i class="fa fa-print"></i>  Profile</a></td>
+	                <?php if ($staff['status'] == 'active'){?> 
+                                <td><a href="<?php echo base_url(); ?>core/status/acadah_users/<?php echo $staff['id']; ?>/inactive/status" class="btn btn-xs btn-danger"><i class="fa fa-times"></i> Disable</a> </td>
+                                <?php }else{?>
+                                <td><a href="<?php echo base_url(); ?>core/status/acadah_users/<?php echo $staff['id']; ?>/active/status" class="btn btn-xs btn-success"><i class="fa fa-check"></i> Enable</a> </td>
+                                  <?php }?>
+	                <td><a href="<?php echo base_url(); ?>staff/print_profile/<?php echo $staff['user_id']; ?>" class="btn btn-xs btn-info"><i class="fa fa-print"></i>  Profile</a></td>
 	              </tr>
 					<?php
 					$i++;

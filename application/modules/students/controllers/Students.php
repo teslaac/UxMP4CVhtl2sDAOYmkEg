@@ -98,6 +98,14 @@ class Students extends Secure_area {
 		$this->load->template('students/edit_student',$this->data);
 	}
 
+	public function print_profile($student_id = ''){
+		if(empty($student_id) or $_SESSION['user_type'] == 'student'){
+      $student_id = $_SESSION['user_id'];
+    }
+    	$this->data['student_info'] = $this->Student->get_student($student_id);
+		$this->load->view('core/template/print_header', $this->data);
+		$this->load->view('students/print_profile');
+	}
 	// public function students($action = 'view')
 	// {
 	// 	$this->data['page'] = 'students';

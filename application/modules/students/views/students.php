@@ -64,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	                  </tr>
 	                </thead>
 	                <tbody>
+
 					<tr dir-paginate="user in users|orderBy:sortKey:reverse|filter:search|itemsPerPage:7">
 							<td><input type="checkbox"></th></td>
 							<td>{{user.user_id}}</td>
@@ -72,7 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 							<td>{{user.gender}}</td>
 							<td>{{user.class_details}}</td>
 							<td><a href="<?php echo base_url(); ?>students/edit/{{user.user_id}}" class="btn btn-xs btn-primary"><i class="fa fa-pencil"></i> Edit</a></td>
-							<td><a href="#" class="btn btn-xs btn-info"><i class="fa fa-print"></i> Print Profile</a>
+							<td><a href="<?php echo base_url(); ?>students/print_profile/{{user.user_id}}" class="btn btn-xs btn-info"><i class="fa fa-print"></i> Print Profile</a>
 							</td>
 						</tr>
 

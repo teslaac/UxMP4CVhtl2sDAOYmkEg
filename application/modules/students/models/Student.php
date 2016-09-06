@@ -110,9 +110,12 @@ class Student extends CI_Model{
 			$field = 'user_id';
 		}
 		$sch_id = $_SESSION['sch_id'];
-		$where = array('sch_id'=>$sch_id,$field=>$id);
-		$join = array('acadah_student', 'acadah_student.student_id=acadah_users.user_id');
-		$query = $this->db->join($join[0], $join[1])->get_where('acadah_users', $where);
+		$this->db->where(array('acadah_users.sch_id'=>$sch_id,$field=>$id));
+		$this->db->join('acadah_student', 'acadah_student.student_id=acadah_users.user_id');
+		$this->db->join('acadah_class_level', "acadah_class_level.level_id=acadah_student.admission_class and acadah_class_level.sch_id='$sch_id'");
+        $this->db->join('acadah_class_details', "acadah_class_details.id=acadah_student.admission_class_details_id","Left");
+		$this->db->from('acadah_users');
+		$query = $this->db->get();
 		if($cdid !== NULL){
 			return $query->result_array();
 		}

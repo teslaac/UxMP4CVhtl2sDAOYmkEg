@@ -13,7 +13,7 @@ class Staff extends Secure_area {
 		$this->data['classes'] = $this->Corem->get_no_class(FALSE);
 		$this->data['sport_house'] = $this->Corem->get_sport_house();
 		parent::__construct($this->data['module']);
-		$this->load->model('staffm');
+		$this->load->model('Staffm');
 
 	}
 
@@ -73,6 +73,15 @@ class Staff extends Secure_area {
 		$this->data['page'] = 'Edit Staff';
 		$this->load->template('staff/edit_staff',$this->data);
 	}	
+
+	public function print_profile($staff_id = ''){
+		if(empty($staff_id) or $_SESSION['user_type'] == 'staff'){
+      $staff_id = $_SESSION['user_id'];
+    }
+    	$this->data['staff_info'] = $this->Staffm->get_staff($staff_id);
+		$this->load->view('core/template/print_header', $this->data);
+		$this->load->view('staff/print_profile');
+	}
 
 	public function quick_reg($no = 1)
 	{   
